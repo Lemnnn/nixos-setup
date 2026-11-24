@@ -21,13 +21,36 @@
             yzhang.markdown-all-in-one
             catppuccin.catppuccin-vsc
             catppuccin.catppuccin-vsc-icons
+            jnoortheen.nix-ide
+
+            # Rust
+            rust-lang.rust-analyzer
+            tamasfe.even-better-toml
+            fill-labs.dependi
+            vadimcn.vscode-lldb
+
+            # JavaScript / TypeScript
+            dbaeumer.vscode-eslint
+            esbenp.prettier-vscode
+            yoavbls.pretty-ts-errors
+            bradlc.vscode-tailwindcss
+            christian-kohler.path-intellisense
+
+            # Docker, databases, APIs
+            ms-azuretools.vscode-containers
+            cweijan.vscode-database-client2
+            rangav.vscode-thunder-client
+            mikestead.dotenv
+
+            # General
+            usernamehw.errorlens
+            mkhl.direnv
+
             # asvetliakov.vscode-neovim
             # vscodevim.vim
             # tamasfe.even-better-toml
-            jnoortheen.nix-ide
             # redhat.vscode-yaml
             # vadimcn.vscode-lldb
-            rust-lang.rust-analyzer
             # ms-vscode.cpptools
             # ms-vscode.cmake-tools
             # ms-vscode.makefile-tools
@@ -69,6 +92,18 @@
             "nix.enableLanguageServer" = true;
             "nix.serverPath" = "nixd";
             "nix.formatterPath" = "nixfmt";
+
+            "rust-analyzer.check.command" = "clippy";
+
+            "[javascript]" = {
+              "editor.defaultFormatter" = "esbenp.prettier-vscode";
+            };
+            "[typescript]" = {
+              "editor.defaultFormatter" = "esbenp.prettier-vscode";
+            };
+            "[json]" = {
+              "editor.defaultFormatter" = "esbenp.prettier-vscode";
+            };
 
             "security.workspace.trust.untrustedFiles" = "open";
 

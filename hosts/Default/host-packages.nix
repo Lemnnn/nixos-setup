@@ -20,13 +20,20 @@
     rust-analyzer
     gcc
     pkg-config
+    rustlings
+    bacon
+    cargo-watch
+    cargo-edit
 
     # Docker & Databases
     docker-compose
     lazydocker
     postgresql
 
-    # obsidian
+    # Apps
+    obsidian
+    bruno
+
     # ludusavi
     # godot
     # proton-vpn
