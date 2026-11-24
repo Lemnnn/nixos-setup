@@ -1,5 +1,5 @@
 {
-  username = "railgun"; # auto-set with install.sh, live-install.sh, and rebuild scripts.
+  username = "lemn"; # auto-set with install.sh, live-install.sh, and rebuild scripts.
 
   # Desktop Environment
   desktop = "hyprland"; # hyprland, i3, gnome, plasma6
@@ -13,8 +13,8 @@
 
   # Default Applications
   terminal = "kitty"; # kitty, alacritty, wezterm
-  editor = "nixvim"; # nixvim, zed, vscode, helix, doom-emacs, nvchad, neovim
-  browser = "librewolf"; # librewolf, zen-beta, firefox, floorp
+  editor = "vscode"; # nixvim, zed, vscode, helix, doom-emacs, nvchad, neovim
+  browser = "firefox"; # librewolf, zen-beta, firefox, floorp
   fileManager = "thunar"; # yazi, lf, thunar
   shell = "zsh"; # bash, zsh
   games = false; # Enable/Disable gaming module
@@ -22,16 +22,16 @@
   # Hardware
   hostname = "nixos";
   videoDriver = "nvidia"; # nvidia, amdgpu, intel
-  nvidiaChannel = "legacy_580"; # stable, latest, beta, legacy_xxx
-  bluetoothSupport = false; # Whether your motherboard supports bluetooth
-  batterySupport = false; # Whether device has a battery (laptop)
+  nvidiaChannel = "stable"; # stable, latest, beta, legacy_xxx
+  bluetoothSupport = true; # Whether your motherboard supports bluetooth
+  batterySupport = true; # Whether device has a battery (laptop)
 
   # Localization
-  timezone = "Europe/London";
-  locale = "en_GB.UTF-8";
+  timezone = "Europe/Bucharest";
+  locale = "en_US.UTF-8";
   clock24h = true;
-  kbdLayout = "gb";
-  kbdVariant = "extd";
-  consoleKeymap = "uk";
+  kbdLayout = "us";
+  kbdVariant = "";
+  consoleKeymap = "us";
   capslockAsESC = false;
 }

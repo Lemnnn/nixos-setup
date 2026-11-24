@@ -8,34 +8,20 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "uas" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/mapper/luks-root";
+    { device = "/dev/disk/by-uuid/211b170f-46a0-449c-ad13-389e70435a7a";
       fsType = "ext4";
     };
-
-  boot.initrd.luks.devices."luks-root".device = "/dev/disk/by-uuid/03b99f92-2283-40e6-9851-524ea38ef396";
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/7DCC-56FB";
+    { device = "/dev/disk/by-uuid/4025-28B3";
       fsType = "vfat";
-      options = [ "fmask=0022" "dmask=0022" ];
-    };
-
-  fileSystems."/home" =
-    { device = "/dev/mapper/luks-home";
-      fsType = "btrfs";
-    };
-
-  boot.initrd.luks.devices."luks-home".device = "/dev/disk/by-uuid/45cbaba1-6c60-4388-b7b6-bb8a5235e099";
-
-  fileSystems."/mnt/work" =
-    { device = "/dev/disk/by-uuid/f6f6d68c-68f8-4c50-8155-105a22b9ff35";
-      fsType = "ext4";
+      options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices = [ ];

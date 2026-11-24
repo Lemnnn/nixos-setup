@@ -55,4 +55,14 @@ in
     # ../../modules/programs/misc/lact # GPU fan, clock and power configuration
   ]
   ++ lib.optional (vars.games == true) ../../modules/core/games.nix;
+  time.hardwareClockInLocalTime = true;
+  boot.loader.grub.configurationLimit = 10;
+  hardware.nvidia.open = lib.mkForce true;
+  hardware.nvidia.powerManagement.finegrained = true;
+  hardware.nvidia.prime = {
+    offload.enable = true;
+    offload.enableOffloadCmd = true;
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:1:0:0";
+  };
 }

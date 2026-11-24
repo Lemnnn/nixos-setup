@@ -70,7 +70,7 @@ in
   "privacy.purge_trackers.enabled" = lock-true;
   "privacy.trackingprotection.enabled" = lock-true;
   "privacy.trackingprotection.fingerprinting.enabled" = lock-true;
-  "privacy.resistFingerprinting" = lock-true;
+  "privacy.resistFingerprinting" = false;
   "privacy.trackingprotection.socialtracking.enabled" = lock-true;
   "privacy.trackingprotection.cryptomining.enabled" = lock-true;
   "privacy.globalprivacycontrol.enabled" = lock-true;
@@ -81,7 +81,7 @@ in
   "privacy.query_stripping.enabled.pbmode" = lock-true;
   "browser.sessionstore.privacy_level" = 0;
   "browser.contentblocking.category" = {
-    Value = "strict";
+    Value = "standard";
     Status = "locked";
   };
   "network.http.referer.XOriginTrimmingPolicy" = 2;
@@ -305,7 +305,7 @@ in
   "browser.discovery.enabled" = false;
   "browser.laterrun.enabled" = false;
   "browser.ssb.enabled" = true;
-  "identity.fxaccounts.enabled" = lock-false;
+  "identity.fxaccounts.enabled" = true;
   "app.update.auto" = false;
 
   # ui customization

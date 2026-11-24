@@ -53,6 +53,7 @@ hl.config({
 
 			sensitivity = 0,
 			force_no_accel = true,
+			kb_options = "altwin:swap_lalt_lwin",
 		}
 
 		if capslockAsESC then
@@ -117,6 +118,7 @@ hl.config({
 	},
 	render = {
 		direct_scanout = 0, -- 0 = off, 1 = on, 2 = auto (on with content type ‘game’)
+		cm_auto_hdr = 0,
 	},
 	ecosystem = {
 		no_update_news = true,
@@ -127,7 +129,7 @@ hl.config({
 		mouse_move_focuses_monitor = true,
 		swallow_regex = "^(Alacritty|kitty)$",
 		enable_swallow = true,
-		vrr = 2, -- enable variable refresh rate (0=off, 1=on, 2=fullscreen only, 3 = fullscreen games/media)
+		vrr = 0, -- enable variable refresh rate (0=off, 1=on, 2=fullscreen only, 3 = fullscreen games/media)
 	},
 	xwayland = {
 		force_zero_scaling = false,

@@ -27,7 +27,7 @@
             jnoortheen.nix-ide
             # redhat.vscode-yaml
             # vadimcn.vscode-lldb
-            # rust-lang.rust-analyzer
+            rust-lang.rust-analyzer
             # ms-vscode.cpptools
             # ms-vscode.cmake-tools
             # ms-vscode.makefile-tools
@@ -65,6 +65,10 @@
             "workbench.startupEditor" = "none";
             "telemetry.enableCrashReporter" = false;
             "telemetry.enableTelemetry" = false;
+
+            "nix.enableLanguageServer" = true;
+            "nix.serverPath" = "nixd";
+            "nix.formatterPath" = "nixfmt";
 
             "security.workspace.trust.untrustedFiles" = "open";
 
@@ -124,7 +128,7 @@
             "C_Cpp.intelliSenseCacheSize" = 2048;
             "C_Cpp.intelliSenseMemoryLimit" = 2048;
             "C_Cpp.default.browse.path" = [
-              ''''${workspaceFolder}/**''
+              "\${workspaceFolder}/**"
             ];
             "C_Cpp.default.cStandard" = "gnu11";
             "C_Cpp.inlayHints.parameterNames.hideLeadingUnderscores" = false;
